@@ -56,3 +56,5 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 - Inspiration drawn from classic scientific calculators like the Casio fx-991ES
 - Thanks to Google for providing Material Design Icons and Fonts
+
+<img src="calci.png" width="500" height="600">
