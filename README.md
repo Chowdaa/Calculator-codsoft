@@ -29,8 +29,8 @@ STELLAR-82ES is a web-based advanced scientific calculator that mimics the funct
 
 ## Setup and Usage
 
-1. Clone the repository: 
-2. Navigate to the project directory:
+1. Clone the repository: [Repository](https://github.com/Chowdaa/Calculator.git)
+2. Navigate to the project directory
 3. Open `index.html` in your preferred web browser.
 
 ## Deployment on Netlify
