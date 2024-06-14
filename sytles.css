@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Mono&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    font-family: 'Roboto Mono', monospace;
+    padding: 20px;
+}
+
+.calculator {
+    background-color: #263238;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 380px;
+    margin: 20px 0;
+}
+
+.branding {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #eceff1;
+    margin-bottom: 10px;
+}
+
+.solar-panel {
+    height: 30px;
+    background: linear-gradient(90deg, #1a237e, #3949ab, #1a237e);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.display {
+    background-color: #e0f2f1;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: right;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    min-height: 100px;
+}
+
+#expression {
+    min-height: 24px;
+    font-size: 18px;
+    color: #546e7a;
+    position: relative;
+    z-index: 5;
+}
+
+#result {
+    font-size: 36px;
+    color: #263238;
+    position: relative;
+    z-index: 5;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Roboto Mono', monospace;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.shift, .alpha, .mode { background-color: #ff6f00; color: white; }
+.mixed { background-color: #ffd54f; }
+.key { background-color: #90a4ae; color: white; }
+.digit { background-color: #eceff1; color: #263238; }
+.operator { background-color: #4db6ac; color: white; }
+.equals { background-color: #00897b; color: white; }
+
+.pressed {
+    animation: press 0.2s ease-out;
+}
+
+@keyframes press {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.loader {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
